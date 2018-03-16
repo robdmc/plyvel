@@ -24,6 +24,9 @@ ext_modules = [
         sources=['plyvel/_plyvel.cpp', 'plyvel/comparator.cpp'],
         libraries=['leveldb'],
         extra_compile_args=extra_compile_args,
+        extra_link_args=[
+            "-I/usr/local/include/",
+            "-L/usr/local/lib/"]
     )
 ]
 
